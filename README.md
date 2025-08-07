@@ -1,7 +1,5 @@
 # MasuyaShop - Aplikasi Manajemen Toko
 
-![MasuyaShop Logo](https://via.placeholder.com/150x150.png?text=MasuyaShop)
-
 MasuyaShop adalah aplikasi desktop berbasis Java untuk manajemen toko yang menyediakan fitur pengelolaan produk, pelanggan, dan transaksi penjualan. Aplikasi ini dibangun menggunakan Java Swing dengan database SQL Server.
 
 ## 📋 Daftar Isi
@@ -43,48 +41,18 @@ Aplikasi ini menyediakan fitur CRUD (Create, Read, Update, Delete) untuk:
 
 ## 🔄 Entity Relationship Diagram
 
-```
-+-------------+       +-------------+       +-------------+
-|   Customer  |       |  Transaksi  |       |   Produk    |
-+-------------+       +-------------+       +-------------+
-| PK: kode    |<----->| PK: no_inv  |       | PK: kode    |
-|    nama     |       | FK: kode_cust|       |    nama     |
-|    alamat   |       |    tgl_inv  |       |    harga    |
-|    kelurahan|       |    total    |       |    stok     |
-|    kecamatan|       +-------------+       +-------------+
-|    kota     |              |
-|    provinsi |              |
-|    kode_pos |              |
-+-------------+              |
-                             |
-                             v
-                     +------------------+
-                     | Detail_Transaksi |
-                     +------------------+
-                     | PK: no_inv, kode_produk |
-                     | FK: no_inv       |
-                     | FK: kode_produk  |
-                     |    qty           |
-                     |    jumlah        |
-                     |    dsc_1         |
-                     |    dsc_2         |
-                     |    dsc_3         |
-                     |    harga_akhir   |
-                     +------------------+
-```
+<img width="6221" height="2031" alt="Blank diagram - Page 1" src="https://github.com/user-attachments/assets/d8a632c8-41ec-4ef7-93a7-7c8e83d686ef" />
 
 ## 📊 Schema Diagram
 
-```
-Customer (kode, nama, alamat_lengkap, kelurahan, kecamatan, kota, provinsi, kode_pos)
-Produk (kode, nama, harga, stok)
-Transaksi (no_inv, kode_cust, tgl_inv, total)
-Detail_Transaksi (no_inv, kode_produk, nama_produk, qty, jumlah, dsc_1, dsc_2, dsc_3, harga_akhir)
-```
+<img width="1362" height="614" alt="Untitled (8)" src="https://github.com/user-attachments/assets/4acc2472-a3a1-4c2f-8900-12155057693b" />
 
 ## 📁 Struktur SQL
 
-Proyek ini menggunakan struktur SQL yang terorganisir dengan baik:
+https://storage.andinesia.my.id/masuya-shop/masuya-db-script.sql
+https://storage.andinesia.my.id/masuya-shop/masuya_shop_db.bak
+
+Proyek ini menggunakan struktur SQL sebagai berikut:
 
 ```
 masuya_shop_db/
@@ -166,7 +134,6 @@ MasuyaShop/
 - **UI Framework**: Java Swing dengan komponen kustom
 - **Database**: Microsoft SQL Server
 - **Koneksi Database**: JDBC
-- **Reporting**: JasperReports
 - **Build Tool**: Apache Ant
 - **IDE**: NetBeans
 
