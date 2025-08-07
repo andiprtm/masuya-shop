@@ -7,6 +7,7 @@ MasuyaShop adalah aplikasi desktop berbasis Java untuk manajemen toko yang menye
 - [Fitur](#fitur)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 - [Schema Diagram](#schema-diagram)
+- [Wireframe](#wireframe)
 - [Struktur SQL](#struktur-sql)
 - [Struktur File](#struktur-file)
 - [Teknologi](#teknologi)
@@ -46,6 +47,12 @@ Aplikasi ini menyediakan fitur CRUD (Create, Read, Update, Delete) untuk:
 ## 📊 Schema Diagram
 
 <img width="1362" height="614" alt="Untitled (8)" src="https://github.com/user-attachments/assets/4acc2472-a3a1-4c2f-8900-12155057693b" />
+
+## 🖼️ Wireframe
+
+Desain wireframe aplikasi dapat dilihat pada link Figma berikut:
+
+[Wireframe MasuyaShop di Figma](https://www.figma.com/design/RCsMG5RN2UrLRMPGpv95yc/Masuya?node-id=0-1&p=f&t=02S8xMao8JkHBI9c-0)
 
 ## 📁 Struktur SQL
 
