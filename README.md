@@ -56,8 +56,9 @@ Desain wireframe aplikasi dapat dilihat pada link Figma berikut:
 
 ## 📁 Struktur SQL
 
-https://storage.andinesia.my.id/masuya-shop/masuya-db-script.sql
-https://storage.andinesia.my.id/masuya-shop/masuya_shop_db.bak
+File SQL tersedia di link berikut:
+- [Script SQL Database](https://storage.andinesia.my.id/masuya-shop/masuya-db-script.sql)
+- [Backup Database (.bak)](https://storage.andinesia.my.id/masuya-shop/masuya_shop_db.bak)
 
 Proyek ini menggunakan struktur SQL sebagai berikut:
 
