@@ -1,0 +1,204 @@
+# MasuyaShop - Aplikasi Manajemen Toko
+
+![MasuyaShop Logo](https://via.placeholder.com/150x150.png?text=MasuyaShop)
+
+MasuyaShop adalah aplikasi desktop berbasis Java untuk manajemen toko yang menyediakan fitur pengelolaan produk, pelanggan, dan transaksi penjualan. Aplikasi ini dibangun menggunakan Java Swing dengan database SQL Server.
+
+## 📋 Daftar Isi
+
+- [Fitur](#fitur)
+- [Entity Relationship Diagram](#entity-relationship-diagram)
+- [Schema Diagram](#schema-diagram)
+- [Struktur SQL](#struktur-sql)
+- [Struktur File](#struktur-file)
+- [Teknologi](#teknologi)
+- [Instalasi](#instalasi)
+- [Penggunaan](#penggunaan)
+
+## ✨ Fitur
+
+Aplikasi ini menyediakan fitur CRUD (Create, Read, Update, Delete) untuk:
+
+### 🧑‍💼 Manajemen Pelanggan
+- Tambah pelanggan baru
+- Lihat daftar pelanggan
+- Edit informasi pelanggan
+- Hapus pelanggan
+- Pencarian pelanggan
+
+### 📦 Manajemen Produk
+- Tambah produk baru
+- Lihat daftar produk
+- Edit informasi produk
+- Hapus produk
+- Pencarian produk
+
+### 💰 Manajemen Transaksi
+- Buat transaksi baru dengan multiple item
+- Lihat daftar transaksi
+- Edit transaksi
+- Hapus transaksi
+- Generate nomor invoice otomatis
+- Perhitungan diskon bertingkat (3 level diskon)
+
+## 🔄 Entity Relationship Diagram
+
+```
++-------------+       +-------------+       +-------------+
+|   Customer  |       |  Transaksi  |       |   Produk    |
++-------------+       +-------------+       +-------------+
+| PK: kode    |<----->| PK: no_inv  |       | PK: kode    |
+|    nama     |       | FK: kode_cust|       |    nama     |
+|    alamat   |       |    tgl_inv  |       |    harga    |
+|    kelurahan|       |    total    |       |    stok     |
+|    kecamatan|       +-------------+       +-------------+
+|    kota     |              |
+|    provinsi |              |
+|    kode_pos |              |
++-------------+              |
+                             |
+                             v
+                     +------------------+
+                     | Detail_Transaksi |
+                     +------------------+
+                     | PK: no_inv, kode_produk |
+                     | FK: no_inv       |
+                     | FK: kode_produk  |
+                     |    qty           |
+                     |    jumlah        |
+                     |    dsc_1         |
+                     |    dsc_2         |
+                     |    dsc_3         |
+                     |    harga_akhir   |
+                     +------------------+
+```
+
+## 📊 Schema Diagram
+
+```
+Customer (kode, nama, alamat_lengkap, kelurahan, kecamatan, kota, provinsi, kode_pos)
+Produk (kode, nama, harga, stok)
+Transaksi (no_inv, kode_cust, tgl_inv, total)
+Detail_Transaksi (no_inv, kode_produk, nama_produk, qty, jumlah, dsc_1, dsc_2, dsc_3, harga_akhir)
+```
+
+## 📁 Struktur SQL
+
+Proyek ini menggunakan struktur SQL yang terorganisir dengan baik:
+
+```
+masuya_shop_db/
+├── 00_Database
+│   ├── 01_CreateDatabase.sql
+│   └── 02_DatabaseSettings.sql
+├── 01_Security
+│   └── 01_CreateUser_andi.sql
+├── 02_Types
+│   └── 01_DetailTransaksiType.sql
+├── 03_Tables
+│   ├── 01_Customer.sql
+│   ├── 02_Produk.sql
+│   ├── 03_Transaksi.sql
+│   └── 04_Detail_Transaksi.sql
+├── 04_Triggers
+│   └── 01_trg_UpdateStokProduk.sql
+├── 05_StoredProcedures
+│   ├── sp_DeleteCustomer.sql
+│   ├── sp_DeleteProduk.sql
+│   ├── sp_DeleteTransaksi.sql
+│   ├── sp_GenerateInvoiceNo.sql
+│   ├── sp_InsertCustomer.sql
+│   ├── sp_InsertProduk.sql
+│   ├── sp_InsertTransaksi.sql
+│   ├── sp_SearchCustomer.sql
+│   ├── sp_SelectCustomer.sql
+│   ├── sp_SelectCustomerByKode.sql
+│   ├── sp_SelectFullTransaksiByNoInv.sql
+│   ├── sp_SelectProduk.sql
+│   ├── sp_SelectTransaksiDefault.sql
+│   ├── sp_UpdateCustomer.sql
+│   ├── sp_UpdateProduk.sql
+│   └── sp_UpdateTransaksi.sql
+```
+
+## 📂 Struktur File
+
+Proyek ini menggunakan arsitektur MVC (Model-View-Controller) untuk memisahkan logika bisnis, tampilan, dan kontrol:
+
+```
+MasuyaShop/
+├── src/
+│   ├── Controller/
+│   │   ├── CustomerController.java
+│   │   ├── ProductController.java
+│   │   └── TransactionController.java
+│   ├── Dao/
+│   │   ├── CustomerDao.java
+│   │   ├── ProdukDao.java
+│   │   └── TransaksiDao.java
+│   ├── Db/
+│   │   └── DBConnection.java
+│   ├── Main/
+│   │   ├── MenuUtama.form
+│   │   └── MenuUtama.java
+│   ├── Model/
+│   │   ├── Customer.java
+│   │   ├── DetailTransaksi.java
+│   │   ├── FullTransaksi.java
+│   │   ├── Produk.java
+│   │   └── Transaksi.java
+│   ├── Pallete/
+│   │   └── GradientPanel.java
+│   ├── Util/
+│   │   ├── Helper.java
+│   │   └── OperationResult.java
+│   └── View/
+│       ├── Customer/
+│       ├── Product/
+│       ├── Search/
+│       └── Transaksi/
+└── lib/ (library eksternal)
+```
+
+## 🔧 Teknologi
+
+- **Bahasa Pemrograman**: Java
+- **UI Framework**: Java Swing dengan komponen kustom
+- **Database**: Microsoft SQL Server
+- **Koneksi Database**: JDBC
+- **Reporting**: JasperReports
+- **Build Tool**: Apache Ant
+- **IDE**: NetBeans
+
+## 🚀 Instalasi
+
+1. Clone repositori ini
+2. Buat database dengan menjalankan script SQL di folder `masuya_shop_db`
+3. Sesuaikan konfigurasi database di `src/Db/DBConnection.java`
+4. Buka proyek di NetBeans
+5. Build dan jalankan aplikasi
+
+## 💻 Penggunaan
+
+1. Jalankan aplikasi
+2. Gunakan menu navigasi di sebelah kiri untuk beralih antara manajemen Produk, Customer, dan Transaksi
+3. Untuk membuat transaksi baru:
+   - Pilih menu Transaksi
+   - Klik tombol "Tambah"
+   - Pilih customer
+   - Tambahkan produk ke keranjang
+   - Atur jumlah dan diskon jika diperlukan
+   - Simpan transaksi
+
+## 📝 Catatan
+
+Aplikasi ini dikembangkan sebagai proyek pembelajaran dan dapat dikembangkan lebih lanjut dengan menambahkan fitur-fitur seperti:
+
+- Manajemen stok otomatis
+- Laporan penjualan
+- Dashboard analitik
+- Manajemen pengguna dengan hak akses berbeda
+
+---
+
+&copy; 2023 MasuyaShop. Dibuat dengan ❤️ oleh Andi.
