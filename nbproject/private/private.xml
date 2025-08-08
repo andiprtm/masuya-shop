@@ -3,27 +3,35 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Model/Produk.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Db/DBConnection.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Main/MenuUtama.java</file>
-            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/View/Customer/MenuCustomer.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/View/Transaksi/ProdukItem/ProdukItem.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Model/DetailTransaksi.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Dao/Test/TransaksiE2ETest.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/View/Customer/AddOrEditCustomer.java</file>
-            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Dao/ProdukDao.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/View/Product/AddOrEditProduct.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Util/OperationResult.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Controller/TransactionController.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Dao/Test/TransaksiMultiProductTest.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Pallete/GradientPanel.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/View/Transaksi/AddOrEditTransaksi.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Controller/ProductController.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Model/Transaksi.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Model/Produk.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Util/Helper.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/View/Customer/MenuCustomer.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Model/FullTransaksi.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/View/Search/SearchProduk.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Dao/ProdukDao.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Dao/CustomerDao.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/View/Product/MenuProduct.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/View/Transaksi/MenuTransaksi.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Dao/Test/ProductDaoTest.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Dao/TransaksiDao.java</file>
-            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Dao/Test/TransaksiMultiProductTest.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Dao/Test/CustomerDaoTest.java</file>
-            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Pallete/GradientPanel.java</file>
             <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Model/Customer.java</file>
-            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/View/Transaksi/AddOrEditTransaksi.java</file>
-            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Model/Transaksi.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/View/Search/SearchCustomer.java</file>
+            <file>file:/C:/Users/andid/Documents/NetBeansProjects/MasuyaShop/src/Controller/CustomerController.java</file>
         </group>
     </open-files>
 </project-private>
